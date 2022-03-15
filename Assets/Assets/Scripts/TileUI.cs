@@ -56,6 +56,7 @@ public class TileUI : MonoBehaviour
         {
             upgradeButton.interactable = false;
         }
+        
     }
 
     public void Sell()

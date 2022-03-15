@@ -200,9 +200,12 @@ public class Tile : MonoBehaviour
 
     public void sellTurret()
     {
-        //PlayerStats.money 
+         //PlayerStats.money 
         Destroy(turret);
-        
+
+        //업그레이드 체크 초기화
+        isUpgrade = false;
+
         PlayerStats.money += turretBlueprint.price / 2;
     }
 
