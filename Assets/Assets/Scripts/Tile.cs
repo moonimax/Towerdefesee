@@ -31,7 +31,8 @@ public class Tile : MonoBehaviour
     [HideInInspector]
     public bool isUpgrade = false;
     public bool isSell = false;
-    // Start is called before the first frame update
+
+    TileUI tileUI;
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -88,6 +89,7 @@ public class Tile : MonoBehaviour
         // GetComponent<MeshRenderer>().material.color = Color.white;
         //rend = gameObject.GetComponent<MeshRenderer>();
         rend.material.color = startcolor;
+        
     }
 
 
@@ -104,7 +106,7 @@ public class Tile : MonoBehaviour
             return;
         }
         //기본 터렛을 설치한다
-
+        
     }
 
     //마우스로 오브젝트를 클릭할때

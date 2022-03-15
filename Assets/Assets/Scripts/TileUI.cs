@@ -52,6 +52,7 @@ public class TileUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
         if (target.isUpgrade)
         {
             upgradeButton.interactable = false;
@@ -66,7 +67,7 @@ public class TileUI : MonoBehaviour
         Hide();
 
         Instantiate(goldimpact, transform.position, transform.rotation);
-        
+        BuildManager.instance.DeselectNode();
     }
 
     
